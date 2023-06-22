@@ -8,53 +8,72 @@
     <link rel="stylesheet" href ="./css/style.css">
 </head>
 <body>
-   
-    <div class="gallery-container">
-        <div class="gallery-row">
-          <div class="gallery-item">
-            <img src="./images/s1.jpg" alt="Image 1">
-           
-          </div>
-          <div class="gallery-item">
-            <img src="./images/s2.jpg" alt="Image 2">
-            
-          </div>
-          <div class="gallery-item">
-            <img src="./images/s7.jpg" alt="Image 3">
-          
-          </div>
-        </div>
-        <div class="gallery-row">
-          <div class="gallery-item">
-            <img src="./images/s4.jpg" alt="Image 4">
-         
-          </div>
-          <div class="gallery-item">
-            <img src="./images/s9.jpg" alt="Image 5">
-          
-          </div>
-          <div class="gallery-item">
-            <img src="./images/s6.jpg" alt="Image 6">
-          
-          </div>
-        </div>
-        <div class="gallery-row">
-          <div class="gallery-item">
-            <img src="./images/s3.jpg" alt="Image 7">
-         
-          </div>
-          <div class="gallery-item">
-            <img src="./images/s8.jpg" alt="Image 8">
-          
-          </div>
-          <div class="gallery-item">
-            <img src="./images/s5.jpg" alt="Image 9">
-           
-          </div>
-        </div>
+  <div class="gallery-container">
+    <div class="gallery-row">
+      <div class="gallery-item">
+       <img id="myImg" src="./images/s1.jpg" alt="Image 1" style="width:100%;max-width:300px" onclick="pop(this)">
+       
+      </div>
+      <div class="gallery-item">
+        <img id="myImg" src="./images/s2.jpg" alt="Image 2" style="width:100%;max-width:300px" onclick="pop(this)">
+      </div>
+      <div class="gallery-item">
+        <img id="myImg" src="./images/s3.jpg" alt="Image 3" style="width:100%;max-width:300px" onclick="pop(this)">
+      
+      </div>
     </div>
-   
+    <div class="gallery-row">
+      <div class="gallery-item">
+        <img id="myImg" src="./images/s4.jpg" alt="Image 4" style="width:100%;max-width:300px" onclick="pop(this)">
+     
+      </div>
+      <div class="gallery-item">
+        <img  id="myImg" src="./images/s5.jpg" alt="Image 5" style="width:100%;max-width:300px" onclick="pop(this)">
       
+      </div>
+      <div class="gallery-item">
+        <img id="myImg" src="./images/s6.jpg" alt="Image 6" style="width:100%;max-width:300px" onclick="pop(this)">
       
+      </div>
+    </div>
+    <div class="gallery-row">
+      <div class="gallery-item">
+        <img id="myImg" src="./images/s7.jpg" alt="Image 7" style="width:100%;max-width:300px" onclick="pop(this)">
+     
+      </div>
+      <div class="gallery-item">
+        <img id="myImg" src="./images/s8.jpg" alt="Image 8" style="width:100%;max-width:300px" onclick="pop(this)">
+      
+      </div>
+      <div class="gallery-item">
+        <img id="myImg" src="./images/s9.jpg" alt="Image 9" style="width:100%;max-width:300px" onclick="pop(this)">
+       
+      </div>
+    </div>
+</div>
+<div id="myModal" class="modal">
+  <span class="close" onclick="exit()">&times;</span>
+  <img class="modal-content" id="img01">
+
+  <a href="https://wa.me/918905927809?text=Hi%20I%20want%20to%20buy%20your%20birthday%20hamper">
+      <button class="send">Buy Now</button>
+  </a>
+</div>
+<script>
+  const button = document.getElementsByClassName("close")[0];
+  const div = document.getElementById("myModal");
+
+  function pop(img) {
+      var popImg = document.getElementById("img01");
+      var modal = document.getElementById("myModal");
+
+      modal.style.display = "block";
+      popImg.src = img.src;
+  }
+  function exit() {
+      div.style.display = "none";
+  }
+</script>
+
 </body>
 </html>

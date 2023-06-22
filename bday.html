@@ -6,55 +6,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>bday</title>
     <link rel="stylesheet" href ="./css/style.css">
+   
 </head>
 <body>
    
     <div class="gallery-container">
         <div class="gallery-row">
           <div class="gallery-item">
-            <img src="./images/b1.jpg" alt="Image 1">
+           <img id="myImg" src="./images/b1.jpg" alt="Image 1" style="width:100%;max-width:300px" onclick="pop(this)">
            
           </div>
           <div class="gallery-item">
-            <img src="./images/b2.jpg" alt="Image 2">
-            
+            <img id="myImg" src="./images/b2.jpg" alt="Image 2" style="width:100%;max-width:300px" onclick="pop(this)">
           </div>
           <div class="gallery-item">
-            <img src="./images/b3.jpg" alt="Image 3">
+            <img id="myImg" src="./images/b3.jpg" alt="Image 3" style="width:100%;max-width:300px" onclick="pop(this)">
           
           </div>
         </div>
         <div class="gallery-row">
           <div class="gallery-item">
-            <img src="./images/b4.jpg" alt="Image 4">
+            <img id="myImg" src="./images/b4.jpg" alt="Image 4" style="width:100%;max-width:300px" onclick="pop(this)">
          
           </div>
           <div class="gallery-item">
-            <img src="./images/b5.jpg" alt="Image 5">
+            <img  id="myImg" src="./images/b5.jpg" alt="Image 5" style="width:100%;max-width:300px" onclick="pop(this)">
           
           </div>
           <div class="gallery-item">
-            <img src="./images/b6.jpg" alt="Image 6">
+            <img id="myImg" src="./images/b6.jpg" alt="Image 6" style="width:100%;max-width:300px" onclick="pop(this)">
           
           </div>
         </div>
         <div class="gallery-row">
           <div class="gallery-item">
-            <img src="./images/b7.jpg" alt="Image 7">
+            <img id="myImg" src="./images/b7.jpg" alt="Image 7" style="width:100%;max-width:300px" onclick="pop(this)">
          
           </div>
           <div class="gallery-item">
-            <img src="./images/b8.jpg" alt="Image 8">
+            <img id="myImg" src="./images/b8.jpg" alt="Image 8" style="width:100%;max-width:300px" onclick="pop(this)">
           
           </div>
           <div class="gallery-item">
-            <img src="./images/b9.jpg" alt="Image 9">
+            <img id="myImg" src="./images/b9.jpg" alt="Image 9" style="width:100%;max-width:300px" onclick="pop(this)">
            
           </div>
         </div>
     </div>
+    <div id="myModal" class="modal">
+      <span class="close" onclick="exit()">&times;</span>
+      <img class="modal-content" id="img01">
+
+      <a href="https://wa.me/918905927809?text=Hi%20I%20want%20to%20buy%20your%20birthday%20hamper">
+          <button class="send">Buy Now</button>
+      </a>
+  </div>
+    <script>
+      const button = document.getElementsByClassName("close")[0];
+      const div = document.getElementById("myModal");
+
+      function pop(img) {
+          var popImg = document.getElementById("img01");
+          var modal = document.getElementById("myModal");
+
+          modal.style.display = "block";
+          popImg.src = img.src;
+      }
+      function exit() {
+          div.style.display = "none";
+      }
+  </script>
    
-      
-      
+ 
 </body>
 </html>
